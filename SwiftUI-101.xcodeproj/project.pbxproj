@@ -11,6 +11,10 @@
 		EACA85CE2B5A78CA005E49AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACA85CD2B5A78CA005E49AC /* ContentView.swift */; };
 		EACA85D02B5A78CC005E49AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EACA85CF2B5A78CC005E49AC /* Assets.xcassets */; };
 		EACA85D32B5A78CC005E49AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EACA85D22B5A78CC005E49AC /* Preview Assets.xcassets */; };
+		EACA85DA2B5A816B005E49AC /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACA85D92B5A816B005E49AC /* AddItemView.swift */; };
+		EACA85DC2B5AA33E005E49AC /* LootItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACA85DB2B5AA33E005E49AC /* LootItem.swift */; };
+		EACA85DE2B5AA549005E49AC /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACA85DD2B5AA549005E49AC /* Game.swift */; };
+		EACA85E02B5AC3C1005E49AC /* LootDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACA85DF2B5AC3C1005E49AC /* LootDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		EACA85CD2B5A78CA005E49AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EACA85CF2B5A78CC005E49AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EACA85D22B5A78CC005E49AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EACA85D92B5A816B005E49AC /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
+		EACA85DB2B5AA33E005E49AC /* LootItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LootItem.swift; sourceTree = "<group>"; };
+		EACA85DD2B5AA549005E49AC /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		EACA85DF2B5AC3C1005E49AC /* LootDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LootDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,10 @@
 			children = (
 				EACA85CB2B5A78CA005E49AC /* SwiftUI_101App.swift */,
 				EACA85CD2B5A78CA005E49AC /* ContentView.swift */,
+				EACA85D92B5A816B005E49AC /* AddItemView.swift */,
+				EACA85DF2B5AC3C1005E49AC /* LootDetailView.swift */,
+				EACA85DB2B5AA33E005E49AC /* LootItem.swift */,
+				EACA85DD2B5AA549005E49AC /* Game.swift */,
 				EACA85CF2B5A78CC005E49AC /* Assets.xcassets */,
 				EACA85D12B5A78CC005E49AC /* Preview Content */,
 			);
@@ -138,6 +150,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EACA85CE2B5A78CA005E49AC /* ContentView.swift in Sources */,
+				EACA85DE2B5AA549005E49AC /* Game.swift in Sources */,
+				EACA85DA2B5A816B005E49AC /* AddItemView.swift in Sources */,
+				EACA85E02B5AC3C1005E49AC /* LootDetailView.swift in Sources */,
+				EACA85DC2B5AA33E005E49AC /* LootItem.swift in Sources */,
 				EACA85CC2B5A78CA005E49AC /* SwiftUI_101App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
