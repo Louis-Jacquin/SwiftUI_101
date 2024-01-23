@@ -9,7 +9,7 @@ import SwiftUI
 
 class Inventory: ObservableObject {
     @Published var loot: [LootItem] = [
-        LootItem(name: "Aubeclat", type: ItemType.fire, rarity: Rarity.legendary, game: availableGames[1]),
+        LootItem(name: "Aubeclat", type: ItemType.fire, rarity: Rarity.unique, game: availableGames[1]),
         LootItem(quantity: 51, name: "Dague de fer", type: ItemType.dagger, rarity: Rarity.common, game: availableGames[1]),
         LootItem(quantity: 3, name: "Arc long", type: ItemType.bow, rarity: Rarity.uncommon, game: availableGames[1])
     ]
@@ -23,6 +23,8 @@ struct ContentView: View {
     @State var showAddItemView: Bool = false
     @StateObject var inventory = Inventory()
 
+    @State private var animationAmount = 1.0
+    
     var body: some View {
         NavigationStack {
             List {
@@ -30,17 +32,7 @@ struct ContentView: View {
                     NavigationLink {
                         LootDetailView(item: item)
                     } label: {
-                        VStack(alignment: .leading) {
-                            HStack {
-                                Circle()
-                                    .fill(item.rarity.getColor())
-                                    .fixedSize(horizontal: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, vertical: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
-                                Text(item.name)
-                                Spacer()
-                                Text(item.type.rawValue)
-                            }
-                            Text("Quantité : " + String(item.quantity))
-                        }
+                        LootRow(item: item)
                     }
                 }
             }
@@ -65,3 +57,5 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+
+

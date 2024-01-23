@@ -21,6 +21,9 @@ struct AddItemView: View {
     @State private var attackItem = false
     @State var attack: Int = 0
     
+    @State private var presentAlert = false
+    @State private var messageAlert = ""
+    
     @EnvironmentObject var inventory: Inventory
     
     var body: some View {
@@ -70,12 +73,27 @@ struct AddItemView: View {
                 }
             }
             Button(action: {
-                inventory.addItem(item: LootItem(quantity: quantity, name: name, type: type, rarity: rarity, attackStrength: attack, game: game))
-                dismiss()
+                if(!name.isEmpty && name.count >= 3 && type != ItemType.unknown && game != Game.emptyGame) {
+                    inventory.addItem(item: LootItem(quantity: quantity, name: name, type: type, rarity: rarity, attackStrength: attack, game: game))
+                    dismiss()
+                } else {
+                    presentAlert = true
+                    
+                    messageAlert = ""
+                    if(name.isEmpty || name.count <= 3) {
+                        messageAlert += "Le nom doit posséder au moins 3 caractères "
+                    }
+                    if(type == ItemType.unknown) {
+                        messageAlert += " le type ne doit pas être indéfini "
+                    }
+                    if(game == Game.emptyGame) {
+                        messageAlert += " le jeu dois être renseigné"
+                    }
+                }
               }, label: {
                 Text("Ajouter")
-            })
-        }
+              })
+        }.alert(messageAlert, isPresented: $presentAlert, actions: {})
     }
 }
 
