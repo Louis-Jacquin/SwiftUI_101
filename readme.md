@@ -20,5 +20,3 @@ Le message d'erreur indique que dans le Tableau de loot l'id est utilisé plusie
 Cela fonctionne de nouveau car la classe est maintenant Observable et la liste loot de la classe est publié donc il est possible de le modifier depuis l'exterieur   
 On utilise @StateObject plutôt que @ObservedObject ou @State car Inventory est un objet donc il ne faut plus utiliser @State et si on utilise @ObservedObject la vue ne sera pas 
 forcement instanciée qu'une seule fois et lors de sa destruction, elle peut ne pas être détruite partout donc on utilise @StateObject
-
-# Amélioration du Looter
